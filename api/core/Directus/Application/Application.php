@@ -137,7 +137,7 @@ class Application extends Slim
             $data = $this->triggerResponseFilter($data, (array) $options);
 
             // @TODO: Response will support xml
-            $response->setBody(json_encode($data));
+            $response->setBody(json_encode($data,JSON_UNESCAPED_UNICODE));
         }
 
         return $response;
