@@ -108,7 +108,7 @@ define([
           });
       }
 
-      toolbar += settings.get('custom_toolbar_options');
+      toolbar += ' ' + settings.get('custom_toolbar_options');
 
       // Parse custom_wrapper and add to toolbar
       var customWrapperSettings;
@@ -123,7 +123,7 @@ define([
       }
 
       var options = {
-        plugins: 'table hr lists link image print pagebreak code insertdatetime media autoresize paste preview',
+        plugins: 'table hr lists link image print pagebreak code insertdatetime media autoresize paste preview directionality',
         selector: '#wysiwyg_' + this.options.name,
         branding: false,
         skin: 'directus',
